@@ -24,7 +24,6 @@ add
 new HtmlWebpackPlugin({
     filename: 'anotherpage.html',
     template: './src/anotherpage.pug',
-    inject: false
     })
 ```
 to "plugins" in webpack.config.js
