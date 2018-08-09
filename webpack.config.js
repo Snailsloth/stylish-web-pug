@@ -17,10 +17,17 @@ const config = {
     path: distPath
   },
   module: {
-    rules: [{
-      test: /\.html$/,
-      use: 'html-loader'
-    }, {
+    rules: [
+    {
+      test: /\.pug$/,
+      use: [
+        'html-loader', 
+        {loader: 'pug-html-loader',
+        options: { pretty: false }
+      }
+      ]
+    }, 
+    {
       test: /\.js$/,
       exclude: /node_modules/,
       use: [{
@@ -29,7 +36,8 @@ const config = {
           presets: ['env']
         }
       }]
-    }, {
+    },
+    {
       test: /\.styl$/,
       exclude: /node_modules/,
       use: [
@@ -43,7 +51,8 @@ const config = {
         'stylus-loader?resolve url',
         // 'resolve-url-loader'
       ]
-    }, {
+    },
+    {
       test: /\.(gif|png|jpe?g|svg)$/i,
       use: [{
         loader: 'file-loader',
@@ -60,7 +69,8 @@ const config = {
         }
       },
       ],
-    }, {
+    },
+    {
       test: /\.(eot|svg|ttf|woff|woff2)$/,
       use: {
         loader: 'file-loader',
@@ -76,7 +86,7 @@ const config = {
       chunkFilename: 'styles/[id].css'
     }),
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/index.pug'
     })
   ],
   optimization: isProduction ? {

@@ -1,0 +1,32 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		title
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width')
+		link(href="https://fonts.googleapis.com/css?family=Montserrat:300,400&amp;subset=cyrillic" rel="stylesheet")
+		link(rel='stylesheet', href='styles/main.css')
+	body
+		div.container.margin-bottom
+			h1 (h1) Заголовок на страницу
+			h2 (h2) Заголовок статьи\блока 
+			p Текст 16px, шрифт "Montserrat"
+			p Наш дата-центр уровня TIER-3 расположен в Санкт-Петербурге, в 10 минутах от ст. метро «Лесная». Здание проектировалось и строилось с учетом размещения в нём дата-центра, поэтому его оснащение и безопасность реализуются на высочайшем уровне
+
+			h3 Разделитель:
+			span.theme-break
+			h3 (h3) Список и ссылки:
+			ul
+				li
+					a.text-link.text-link--default(href="#") Ссылка не посещенная
+				li
+					a.text-link.text-link--visited(href="#") Ссылка посещенная
+				li
+					a.text-link.text-link--hover(href="#") Ссылка ховер
+				li
+					a.text-link.text-link--active(href="#") Ссылка активная
+			span.theme-break
+			a.button.button-primary(href="#") Кнопка стандарт
+		div.container.margin-bottom(style="background-color: #000;")
+			a.button.button-white.margin-top.margin-bottom(href="#") Кнопка светлая
