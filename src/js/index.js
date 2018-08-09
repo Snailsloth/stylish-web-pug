@@ -1,5 +1,5 @@
 import './../styl/styles.styl';
-import _ from 'lodash';
+// import _ from 'lodash';
 
 // const getHeader = () => {
 //     const helloWebpack = _.join(_.values({

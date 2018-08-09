@@ -10,10 +10,11 @@ const distPath = path.join(__dirname, '/public');
 
 const config = {
   entry: {
-    main: './src/js/index.js'
+    main: './src/js/index.js',
+    about: './src/js/about.js'
   },
   output: {
-    filename: 'js/bundle.js',
+    filename: 'js/[name]bundle.js',
     path: distPath
   },
   module: {
@@ -86,7 +87,14 @@ const config = {
       chunkFilename: 'styles/[id].css'
     }),
     new HtmlWebpackPlugin({
-      template: './src/index.pug'
+      filename: 'index.html',
+      template: './src/index.pug',
+      inject: false
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'about.html',
+      template: './src/about.pug',
+      inject: false
     })
   ],
   optimization: isProduction ? {
