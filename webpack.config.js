@@ -89,12 +89,12 @@ const config = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './src/index.pug',
-      inject: false
+      // inject: false
     }),
     new HtmlWebpackPlugin({
       filename: 'about.html',
       template: './src/about.pug',
-      inject: false
+      // inject: false
     })
   ],
   optimization: isProduction ? {
