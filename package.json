@@ -1,0 +1,40 @@
+{
+  "name": "webpack-dev",
+  "version": "1.0.0",
+  "description": "webpack config",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "rimraf public && npm install",
+    "build": "webpack --mode production --colors --progress",
+    "prestart": "rimraf public && npm install",
+    "start": "webpack-dev-server --mode development --hot --colors --progress"
+  },
+  "repository": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^1.0.0",
+    "file-loader": "^1.1.11",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "image-webpack-loader": "^4.2.0",
+    "lodash": "^4.17.4",
+    "mini-css-extract-plugin": "^0.4.0",
+    "resolve-url-loader": "^2.3.0",
+    "rimraf": "^2.6.2",
+    "style-loader": "^0.21.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "uglifyjs-webpack-plugin": "^1.2.3",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0",
+    "webpack-dashboard": "^2.0.0",
+    "webpack-dev-server": "^3.1.5",
+    "yargs": "^12.0.1"
+  }
+}

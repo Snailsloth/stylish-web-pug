@@ -1,0 +1,150 @@
+
+
+
+//base site text color
+base-text-color = #000
+//headings
+heading-color = #333
+//links
+link-color_default = #1e87f0 /* unvisited links */
+link-color_visited = #9c4dd4cc /* visited links   */
+link-color_hover = #5b9fe3 /* user hovers     */
+link-color_active = #1e87f0 /* active links    */
+
+
+/////////////////////////
+//css
+////////////////////////
+
+html
+	font-family 'Montserrat', sans-serif
+	font-weight: lighter
+	font-size: 16px
+	color: base-text-color
+
+h1,h2,h3
+	font-weight: 300
+	color heading-color
+	margin: 0 0 20px 0
+
+
+h1
+	font-size 2rem
+
+h2
+	font-size 1.6rem
+
+h3
+	font-size 1.4rem
+// /* unvisited links */
+// a:link
+// 	color link-color_default
+// /* visited links   */
+// a:visited
+// 	color link-color_default
+// /* user hovers     */
+// a:hover
+// 	color link-color_default
+// /* active links    */
+// a:active
+// 	color link-color_default
+a.text-link--default
+	color link-color_default
+a.text-link--visited
+	color link-color_visited
+a.text-link--hover
+	color link-color_hover
+a.text-link--active
+	color link-color_active
+
+span.theme-break
+	display block
+	box-sizing content-box
+	height 0
+	overflow visible
+	text-align inherit
+	margin 0 0 20px 0
+	border 0
+	border-top 1px solid #e5e5e5
+
+* + span.theme-break
+	margin-top 20px
+
+p, ul, ol, dl, pre, address, fieldset, figure
+	margin: 0 0 20px 0
+
+//standart wrapper
+.container
+	box-sizing: content-box;
+	max-width: 1380px;
+	margin-left: auto;
+	margin-right: auto;
+	padding 15px
+
+.margin-top
+	margin-top 2em
+
+.margin-bottom
+	margin-bottom 2em
+
+ul
+	list-style: none
+	padding-left: 0
+	> li
+		position: relative;
+		&::before
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			height: 5px;
+			margin-right: 10px;
+			width: 5px;
+			background-color: #666;
+			border-radius: 50%;
+
+.button
+	margin: 0;
+	border: none;
+	border-radius: 0;
+	overflow: visible;
+	font: inherit;
+	color: inherit;
+	text-transform: none;
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 0 25px;
+	vertical-align: middle;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 38px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: all 0.2s linear;
+
+.button-primary
+	background-color: link-color_default
+	color: #fff;
+	border: 1px solid transparent;
+	&:hover
+		// background-color link-color_hover
+		padding: 0 28px;
+		box-shadow: 0 0 6px 0 rgba(0,0,0,0.8)
+	&:active
+		background-color: link-color_hover
+		padding: 0 26px
+		box-shadow: 0 0 2px 0 rgba(0,0,0,.8)
+
+.button-white
+	background-color: #fff
+	color: link-color_default
+	border: 1px solid link-color_default;
+	&:hover
+		color: #000000
+		border-color: #000
+		padding: 0 28px;
+		box-shadow: 4px 1px 17px rgba(245, 240, 240, 0.58);
+	&:active
+		padding: 0 26px
+		box-shadow: 0 0 2px 0 rgba(245, 240, 240, 0.58);
+		
